@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h1>{{ user.phone }}</h1>
+        <h1>{{ user.avatar }}</h1>
+
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <label for="">Сколь вам лет?</label>
+            {{ form.age }}
+
+            <label for="">Напишите о себе</label>
+            {{ form.text }}
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

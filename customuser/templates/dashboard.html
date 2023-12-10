@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for user in users %}
+        <a href="{% url 'detail_user' user.id %}"><p>{{ user.first_name }}</p></a>
+    {% endfor %}
+{% endblock %}
